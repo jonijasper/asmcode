@@ -1,0 +1,1 @@
+minkäslaista koodia toi assembly on
