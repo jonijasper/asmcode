@@ -19,3 +19,12 @@ if more than 6, then memory location of first to EBX
 6 close
 
 interrupt call: int 0x80
+
+db/resb define/reserve byte  (1 byte)
+dw/resw define/reserve word  (2 bytes)
+dd/resd define/reserve doubleword    (4 bytes)
+dq/resq define/reserve quadword  (8 bytes)
+dt/rest define/reserve 10 bytes
+
+
+
