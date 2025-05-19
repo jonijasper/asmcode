@@ -11,9 +11,9 @@ section .text
     global _start
 
 _exit:
-    mov eax,1
-    mov ebx,0
-    int 0x80
+    mov eax,1 ;sys_exit
+    mov ebx,0 ;exit code
+    int 0x80 ;kernel call
 
 _kernel:
     int 0x80 ;call kernel
