@@ -13,7 +13,7 @@ _start:
     mov eax,4
     mov ebx,1
     mov ecx,stars
-    mov edx,10 ;stars string is 9+1 bytes
+    mov edx,10 ;stars is 9+1 bytes
     int 0x80
 
     ;exit
