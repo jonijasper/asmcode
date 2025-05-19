@@ -1,0 +1,18 @@
+tutorial:
+https://www.tutorialspoint.com/assembly_programming/assembly_quick_guide.htm
+
+
+nasm -f elf filename.asm -> creates filename.o
+ld -m elf_i386 -s -o exename filename.o -> creates executive ./exename
+
+sys call number to EAX
+arguments to EBX, ECX, EDX, ESI, EDI, EBP
+if more than 6, then memory location of first to EBX
+
+
+1 exit
+2 fork
+3 read
+4 write
+5 open
+6 close
