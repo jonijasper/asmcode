@@ -13,7 +13,7 @@ _start:
     mov eax,4
     mov ebx,1
     mov ecx,stars
-    mov edx,9 ;stars string is 9 bytes
+    mov edx,10 ;stars string is 9+1 bytes
     int 0x80
 
     ;exit
@@ -22,9 +22,12 @@ _start:
     int 0x80
 
 section .data
-msg db 'Displaying 9 stars',0xa
+msg db 'Displaying 9 stars:',0xa
 len equ $-msg
-stars times 9 db '*'
+stars:
+    times 9 db '*'
+    db 0xa
 
 ;stars: label
 ;times 9: repeat 9 times
+;0xa: "\n"
