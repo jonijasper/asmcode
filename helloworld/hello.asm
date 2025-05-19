@@ -9,6 +9,7 @@ _start:     ;entry point
     int 0x80
 
     mov eax,1   ;sys_exit
+    mov ebx,0   ;exit code (ebx,1 signals error)
     int 0x80
 
 section .data
