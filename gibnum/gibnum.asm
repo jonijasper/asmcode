@@ -33,5 +33,18 @@ _start:
     mov ecx,userinput ;reserved space
     mov edx,5 ;5 bytes reserved
     call _kernel
-    
+
+    ;print confirmation and the number
+    mov eax,4 ;sys_write
+    mov ebx,1 ;stdout
+    mov ecx,confirm
+    mov edx,confirmlen
+    call _kernel
+
+    mov eax,4
+    mov ebx,1
+    mov ecx,userinput
+    mov edx,5
+    call _kernel
+
     call _exit
