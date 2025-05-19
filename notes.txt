@@ -26,5 +26,7 @@ dd/resd define/reserve doubleword    (4 bytes)
 dq/resq define/reserve quadword  (8 bytes)
 dt/rest define/reserve 10 bytes
 
+ascii characters:
+0xa: LF = linefeed = "\n" (unix)
 
 
