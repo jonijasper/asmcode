@@ -1,0 +1,15 @@
+sys_exit
+mov eax,1
+mov ebx,0 (normal exit / ebx,1 signals error)
+
+sys_write
+mov eax,4
+mov ebx,1 (stdout)
+mov ecx,string
+mov edx,length
+
+sys_read
+mov eax,3
+mov ebx,2 (stdin)
+mov ecx,string
+mov edx,length
