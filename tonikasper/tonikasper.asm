@@ -14,13 +14,21 @@ _kernel:
     int 0x80 ;call kernel
     ret ;return to caller
 
-_start:
+_print:
     mov eax,SYS_WRITE
     mov ebx,STDOUT
     mov ecx,name
     mov edx,namelen
     call _kernel
+    ret
 
+_start:
+    call _print
+
+    mov [name], BYTE 'J'
+    mov [name+5], BYTE 'J'
+    
+    call _print
     call _exit
 
 
